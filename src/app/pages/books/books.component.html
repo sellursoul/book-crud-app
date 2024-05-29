@@ -1,0 +1,15 @@
+<section class="books">
+  <header>
+    <app-books-header></app-books-header>
+  </header>
+
+  <main>
+    <app-books-table
+      (openAddModal)="openAddBookModal()"
+      (openEditModal)="openEditBookModal($event)"
+      (openDeleteModal)="openDeleteBookModal($event)"
+      (openInfoModal)="openInfoBookModal($event)"
+      [books]="booksList"
+    ></app-books-table>
+  </main>
+</section>

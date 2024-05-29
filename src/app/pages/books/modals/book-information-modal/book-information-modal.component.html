@@ -1,0 +1,28 @@
+<section class="book-info">
+  <h2 mat-dialog-title>Book Information</h2>
+  <mat-dialog-content>
+    <div class="book-info__container">
+      <div class="book-info__text">
+        <div class="book-info__field">
+          <strong>Title:</strong> {{ data.name }}
+        </div>
+        <div class="book-info__field">
+          <strong>Author:</strong> {{ data.author }}
+        </div>
+        <div class="book-info__field">
+          <strong>Year:</strong> {{ data.year }}
+        </div>
+        <div class="book-info__field">
+          <strong>Description:</strong> {{ data.description }}
+        </div>
+      </div>
+      <div class="book-info__actions">
+        <button mat-raised-button (click)="openEditBookModal(data)">Edit</button>
+        <button mat-raised-button (click)="openDeleteBookModal(data)">Delete</button>
+      </div>
+    </div>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Close</button>
+  </mat-dialog-actions>
+</section>

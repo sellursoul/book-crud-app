@@ -1,0 +1,66 @@
+<section class="handle-book">
+  <h2 mat-dialog-title>{{ data ? "Edit Book" : "Add Book" }}</h2>
+  <mat-dialog-content>
+    <form [formGroup]="form">
+      <mat-form-field class="handle-control">
+        <mat-label>Book Name</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="name"
+          [errorStateMatcher]="matcher"
+          placeholder="Enter the name"
+        />
+        <mat-error>{{
+          matcher.handleError(form.get("name"), "Book Name")
+        }}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="handle-control">
+        <mat-label>Author</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="author"
+          [errorStateMatcher]="matcher"
+          placeholder="Enter the author"
+        />
+        <mat-error>{{
+          matcher.handleError(form.get("author"), "Author")
+        }}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="handle-control">
+        <mat-label>Year</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="year"
+          [errorStateMatcher]="matcher"
+          placeholder="Enter the year"
+        />
+        <mat-error>{{
+          matcher.handleError(form.get("year"), "Year")
+        }}</mat-error>
+      </mat-form-field>
+      <mat-form-field class="handle-control">
+        <mat-label>Description</mat-label>
+        <input
+          type="text"
+          matInput
+          formControlName="description"
+          [errorStateMatcher]="matcher"
+          placeholder="Enter the description"
+        />
+        <mat-error>{{
+          matcher.handleError(form.get("description"), "Description")
+        }}</mat-error>
+      </mat-form-field>
+    </form>
+  </mat-dialog-content>
+  <mat-dialog-actions align="end">
+    <button mat-raised-button color="warn" mat-dialog-close>Cancel</button>
+
+    <button mat-raised-button color="primary" (click)="handle()">
+      {{ data ? "Update" : "Create" }}
+    </button>
+  </mat-dialog-actions>
+</section>

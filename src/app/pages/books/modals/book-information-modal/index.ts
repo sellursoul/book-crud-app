@@ -1,0 +1,1 @@
+export * from './book-information-modal.component'

@@ -1,0 +1,33 @@
+.books-table {
+  &__operations {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info {
+    cursor: pointer;
+  }
+}
+
+.no-data {
+  text-align: center;
+}
+
+.mdc-data-table__cell {
+  &:last-child {
+    text-align: right;
+    padding: 0;
+  }
+}
+.mdc-data-table__header-cell {
+  &:last-child {
+    text-align: right;
+  }
+}
+.mdc-button {
+  min-width: auto;
+}
+.mat-mdc-button>.mat-icon {
+  margin-right: 0;
+}
